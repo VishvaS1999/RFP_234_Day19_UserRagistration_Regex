@@ -43,12 +43,12 @@ public class UserRegistrationRegex
         else
             System.out.println("Invalid Mobile Number");
     }
-    public static void password()   //Rule Minimum 8 Characters
+    public static void upperCasePassword()
     {
         Scanner sc  = new Scanner(System.in);
         System.out.println("\nEnter the Password");
         String p = sc.nextLine();
-        if (Pattern.matches("^[A-Za-z0-9]{8,}$", p) == true)
+        if (Pattern.matches("^[A-Z]{1}[a-z0-9]{7,}$", p) == true) //should have 1 upper case
             System.out.println("Valid Password");
         else
             System.out.println("Invalid Password");
@@ -58,6 +58,6 @@ public class UserRegistrationRegex
         userFullName();
         email();
         mobile();
-        password();
+        upperCasePassword();
     }
 }
